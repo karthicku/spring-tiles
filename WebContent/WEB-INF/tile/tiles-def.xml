@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC 
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>            
+	      
+	<definition name=".mainTemplate" template="/WEB-INF/view/jsp/mainTemplate.jsp">
+		<put-attribute name="logo-tile" value="/WEB-INF/view/jsp/lowesLogo.jsp"/>
+		<put-attribute name="pageHeading-tile" value=".pageHeading"/>
+		<put-attribute name="appHeading-tile" value=".appHeading"/>
+		<put-attribute name="topMenu-tile" value=".topMenu"/>
+		<put-attribute name="pageHeading-tile" value=".pageHeading"/> 
+		<put-attribute name="leftNav-tile" value=".leftNav"/>
+		<put-attribute name="content" value="/WEB-INF/view/jsp/blank.jsp"/>
+		<put-attribute name="footer-tile" value=".footer"/>
+	</definition>
+
+	<definition name=".topMenu" template="/WEB-INF/view/jsp/topMenu.jsp" />
+	<definition name=".pageHeading" template="/WEB-INF/view/jsp/pageHeading.jsp" preparer="pageHeadingPreparer"/>
+	<definition name=".appHeading" template="/WEB-INF/view/jsp/appHeading.jsp" preparer="appHeadingPreparer"/>
+	<definition name=".leftNav" template="/WEB-INF/view/jsp/leftNav.jsp" />
+	<definition name=".footer" template="/WEB-INF/view/jsp/footer.jsp" preparer="footerPreparer"/>
+
+	<definition name=".popupTemplate" template="/WEB-INF/view/jsp/popupTemplate.jsp">
+		<put-attribute name="content" value="/WEB-INF/view/jsp/blank.jsp"/>
+	</definition>
+
+</tiles-definitions>
+

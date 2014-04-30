@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+      http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<context:component-scan base-package="com" /> 
+	<context:annotation-config />
+		<bean name="pageHeadingPreparer" class="com.lowes.tiles.web.preparer.PageHeadingViewPreparer" />
+	<bean name="appHeadingPreparer" class="com.lowes.tiles.web.preparer.AppHeadingViewPreparer" />
+	<bean name="footerPreparer" class="com.lowes.tiles.web.preparer.FooterViewPreparer">
+		<constructor-arg index="0" ref="versionConfiguration" />
+	</bean>
+	<mvc:annotation-driven />
+	<bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" />
+		  <property name="order" value="1"/>
+	</bean>
+
+<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+  <property name="prefix" value="/WEB-INF/view/jsp/"/>
+  <property name="suffix" value=".jsp"/>
+  <property name="order" value="2"/>
+</bean>
+ 	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				 <value>/WEB-INF/tile/tilesJsp.xml</value> 
+			</list>   
+		</property>
+	<property name="preparerFactoryClass" value="org.springframework.web.servlet.view.tiles2.SpringBeanPreparerFactory"/>
+		
+	</bean>
+	
+		<!-- Define the version for the application -->
+	<bean id="versionConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="locations">
+			<list>
+				<value>/WEB-INF/version.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+</beans> 

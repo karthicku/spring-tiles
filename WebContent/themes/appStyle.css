@@ -1,0 +1,99 @@
+/* The following styles are specific to the application */ 
+pre.codeText {
+	color: #7F0055;
+	font-family: Courier New;
+	font-size: 12px;
+}
+
+textarea.codeText {
+	color: #7F0055;
+	font-family: Courier New;
+	font-size: 12px;
+}
+
+td.topMenus {
+	font-family: Verdana, Arial, Helvetica, 'sans serif';
+	font-size: 12;
+	font-weight: normal;
+	float: center;
+	width: 100%;
+	margin: 0px;
+	list-style-type: none;
+}
+
+table.content {
+	padding: 0px;
+	border-collapse: collapse;
+	text-align: left;
+	vertical-align: top;
+	width: 100%;
+	color: #665544;
+	margin: 0px auto;
+	clear: both;
+}
+
+tr.content {
+    font-family: Verdana, Arial, Helvetica, 'sans serif';
+    font-size: 12;
+ 	text-align: left;
+}
+
+td.content {
+	font-family: Verdana, Arial, Helvetica, 'sans serif';
+	font-size: 12;
+	text-align: left;
+	vertical-align: top;
+}
+
+td.note {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11;
+	
+}
+
+table.data {
+	font-family: Verdana, Arial, Helvetica, 'sans serif';
+    font-size: 12;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 3px;
+	border: 2px solid #2A4673;
+    text-align: left; 
+	width: 800px;
+}
+
+table.data th {
+    background-color: #2A4673;
+    alink-color: #FFFFFF;
+    color: #FFFFFF;
+    text-align: left; 
+}
+
+tr.even {
+	background-color: #CFCFD1;
+}
+
+tr.odd {
+	background-color: #FFFFFF;
+}
+
+th.sortable {
+    background-color: #2A4673;
+    vertical-align: left; 
+}
+
+th.sortable a {
+	color: #FFFFFF;
+}
+
+.pagebanner {
+	font-family: Verdana, Arial, Helvetica, 'sans serif';
+    font-size: 12;
+    text-align: left; 
+}
+
+.pagelinks {
+	font-family: Verdana, Arial, Helvetica, 'sans serif';
+    font-size: 12;
+    text-align: right; 
+}

@@ -1,0 +1,63 @@
+div.appHeading {
+	padding: 0px 0px 0px 173px;
+}
+
+div.helpAndLogout {
+	padding: 0px 5px 0px 0px;
+}
+
+#top-nav {
+	height: 20px;
+	padding: 0px 0px 0px 100px;
+}
+
+ul.topMenu {
+	padding-top: 3px;
+	padding-left: 0px;
+}
+
+#leftNav {
+	width: 170px;
+	bottom: 13px;
+}
+
+div.leftNav-inner {
+	padding-left: 0px;
+}
+
+	/* Currently required for left nav to work */ 
+table.leftNav {
+	width: 152px;
+}
+
+	/* Currently required for left nav to work */ 
+td.leftMinimize {
+	width: 138px;
+}
+
+	/* Currently required for left nav to work */ 
+td.leftNavHeading {
+	width: 138px;
+}
+
+a.leftNav {
+	width: 123px;
+}
+
+#contentMin {
+	left:173px;
+	bottom:13px;
+}
+ 
+#contentMax {
+	left:30px;
+	bottom:13px;
+		color: #665544;
+	margin: 0px auto;
+	clear: both;
+}
+ 
+div.copyright {
+	padding-left: 35%;
+	padding-right: 15%;
+}
